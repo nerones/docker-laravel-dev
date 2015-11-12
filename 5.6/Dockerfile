@@ -4,4 +4,4 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/* \
     && curl -sS https://getcomposer.org/installer | php \
     && mv composer.phar /usr/local/bin/composer \
-    && npm install -g gulp laravel-elixir
+    && npm install -g gulp
