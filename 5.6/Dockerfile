@@ -1,4 +1,4 @@
-FROM nerones/simple-php-apache-dev:5.6.14
+FROM nerones/simple-php-apache-dev:5.6.17
 RUN apt-get update \
     && apt-get -y install git nodejs-legacy npm curl --no-install-recommends \
     && rm -rf /var/lib/apt/lists/* \
