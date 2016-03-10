@@ -5,4 +5,4 @@ RUN curl -sL https://deb.nodesource.com/setup_4.x | bash - \
     && curl -sS https://getcomposer.org/installer | php \
     && mv composer.phar /usr/local/bin/composer \
     && npm install -g bower gulp laravel-elixir@^3.0.0
-
+RUN rm /usr/local/etc/php/conf.d/xdebug.ini
