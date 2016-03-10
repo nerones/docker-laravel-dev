@@ -4,5 +4,5 @@ RUN curl -sL https://deb.nodesource.com/setup_4.x | bash - \
     && rm -rf /var/lib/apt/lists/* \
     && curl -sS https://getcomposer.org/installer | php \
     && mv composer.phar /usr/local/bin/composer \
-    && npm install -g gulp laravel-elixir@^3.0.0
+    && npm install -g bower gulp laravel-elixir@^3.0.0
 
