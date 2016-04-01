@@ -1,6 +1,6 @@
 FROM nerones/simple-php-apache-dev:5.6.17
 RUN curl -sL https://deb.nodesource.com/setup_4.x | bash -
-RUN apt-get -y install bzip2
+RUN apt-get -y install bzip2 openjdk-7-jre
 RUN apt-get -y install openssh-client git nodejs curl chrpath libssl-dev libxft-dev libfreetype6 libfreetype6-dev libfontconfig1 libfontconfig1-dev --no-install-recommends \
     && rm -rf /var/lib/apt/lists/* \
     && curl -sS https://getcomposer.org/installer | php \
