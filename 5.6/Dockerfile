@@ -1,8 +1,12 @@
 FROM nerones/simple-php-apache-dev:5.6.17
-RUN curl -sL https://deb.nodesource.com/setup_4.x | bash - \
-    && apt-get -y install openssh-client git nodejs curl --no-install-recommends \
+RUN curl -sL https://deb.nodesource.com/setup_4.x | bash -
+RUN apt-get -y install openssh-client git nodejs curl phantomjs --no-install-recommends \
     && rm -rf /var/lib/apt/lists/* \
     && curl -sS https://getcomposer.org/installer | php \
     && mv composer.phar /usr/local/bin/composer \
     && npm install -g bower gulp laravel-elixir@^3.0.0
 RUN rm /usr/local/etc/php/conf.d/xdebug.ini
+RUN mkdir /selenium \
+    && cd /selenium \
+    && wget http://goo.gl/IHP6Qw --quiet -O selenium-standalone-server.jar \
+    && chmod +x selenium-standalone-server.jar
