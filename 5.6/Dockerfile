@@ -1,6 +1,6 @@
 FROM nerones/simple-php-apache-dev:5.6.17
 RUN curl -sL https://deb.nodesource.com/setup_4.x | bash -
-RUN apt-get -y install openssh-client git nodejs curl phantomjs --no-install-recommends \
+RUN apt-get -y install openssh-client git nodejs curl chrpath libssl-dev libxft-dev libfreetype6 libfreetype6-dev libfontconfig1 libfontconfig1-dev --no-install-recommends \
     && rm -rf /var/lib/apt/lists/* \
     && curl -sS https://getcomposer.org/installer | php \
     && mv composer.phar /usr/local/bin/composer \
@@ -10,3 +10,7 @@ RUN mkdir /selenium \
     && cd /selenium \
     && wget http://goo.gl/IHP6Qw --quiet -O selenium-standalone-server.jar \
     && chmod +x selenium-standalone-server.jar
+    && wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-linux-x86_64.tar.bz2 \
+    && tar xf phantomjs-2.1.1-linux-x86_64.tar.bz2 \
+    && chmod +x phantomjs-2.1.1-linux-x86_64 \
+    && mv phantomjs-2.1.1-linux-x86_64 /usr/local/bin/
