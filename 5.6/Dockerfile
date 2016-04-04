@@ -11,7 +11,7 @@ RUN mkdir /selenium \
     && cd /selenium \
     && curl -sL http://goo.gl/IHP6Qw -o selenium-standalone-server.jar \
     && chmod +x selenium-standalone-server.jar \
-    && curl -sL https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-linux-x86_64.tar.bz2 -o phantomjs-2.1.1-linux-x86_64.tar.bz2 \
-    && tar jxf phantomjs-2.1.1-linux-x86_64.tar.bz2 \
-    && chmod +x phantomjs-2.1.1-linux-x86_64/bin/phantomjs \
-    && mv phantomjs-2.1.1-linux-x86_64/bin/phantomjs /usr/local/bin/
+    && curl -sL https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-1.9.7-linux-x86_64.tar.bz2 -o phantomjs-1.9.7-linux-x86_64.tar.bz2 \
+    && tar jxf phantomjs-1.9.7-linux-x86_64.tar.bz2 \
+    && chmod +x phantomjs-1.9.7-linux-x86_64/bin/phantomjs \
+    && mv phantomjs-1.9.7-linux-x86_64/bin/phantomjs /usr/local/bin/
