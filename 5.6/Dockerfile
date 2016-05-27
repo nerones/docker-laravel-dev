@@ -14,7 +14,7 @@ RUN mkdir /selenium \
     && curl -sL https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-1.9.7-linux-x86_64.tar.bz2 -o phantomjs-1.9.7-linux-x86_64.tar.bz2 \
     && tar jxf phantomjs-1.9.7-linux-x86_64.tar.bz2 \
     && chmod +x phantomjs-1.9.7-linux-x86_64/bin/phantomjs \
-    && mv phantomjs-1.9.7-linux-x86_64/bin/phantomjs /usr/local/bin/phantomjs-bin
-    && echo "/usr/local/bin/phantomjs-bin "$@" > /dev/null 2>&1" > /usr/local/bin/phamtomjs
+    && mv phantomjs-1.9.7-linux-x86_64/bin/phantomjs /usr/local/bin/phantomjs-bin \
+    && echo "/usr/local/bin/phantomjs-bin "$@" > /dev/null 2>&1" > /usr/local/bin/phamtomjs \
     && chmod +x /usr/local/bin/phamtomjs
  
