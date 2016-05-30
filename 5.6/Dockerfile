@@ -15,6 +15,6 @@ RUN mkdir /selenium \
     && tar jxf phantomjs-1.9.7-linux-x86_64.tar.bz2 \
     && chmod +x phantomjs-1.9.7-linux-x86_64/bin/phantomjs \
     && mv phantomjs-1.9.7-linux-x86_64/bin/phantomjs /usr/local/bin/phantomjs-bin \
-    && echo "/usr/local/bin/phantomjs-bin "$@" > /dev/null 2>&1" > /usr/local/bin/phantomjs \
+    && echo "/usr/local/bin/phantomjs-bin \"\$@\" > /dev/null 2>&1" > /usr/local/bin/phantomjs \
     && chmod +x /usr/local/bin/phantomjs
  
