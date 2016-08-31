@@ -5,7 +5,7 @@ RUN apt-get -y install openssh-client git nodejs curl chrpath libssl-dev libxft-
     && rm -rf /var/lib/apt/lists/* \
     && curl -sS https://getcomposer.org/installer | php \
     && mv composer.phar /usr/local/bin/composer \
-    && npm install -g bower gulp laravel-elixir@^6.0.0
+    && npm install -g bower gulp laravel-elixir@^6.0.0-9
 RUN rm /usr/local/etc/php/conf.d/xdebug.ini
 RUN mkdir /selenium \
     && cd /selenium \
