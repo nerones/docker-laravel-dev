@@ -1,11 +1,11 @@
 FROM nerones/simple-php-apache-dev:7.0.3
-RUN curl -sL https://deb.nodesource.com/setup_4.x | bash -
+RUN curl -sL https://deb.nodesource.com/setup_6.x | bash -
 RUN apt-get -y install bzip2 openjdk-7-jre
 RUN apt-get -y install openssh-client git nodejs curl chrpath libssl-dev libxft-dev libfreetype6 libfreetype6-dev libfontconfig1 libfontconfig1-dev --no-install-recommends \
     && rm -rf /var/lib/apt/lists/* \
     && curl -sS https://getcomposer.org/installer | php \
     && mv composer.phar /usr/local/bin/composer \
-    && npm install -g bower gulp laravel-elixir@^3.0.0
+    && npm install -g bower gulp laravel-elixir@^6.0.0
 RUN rm /usr/local/etc/php/conf.d/xdebug.ini
 RUN mkdir /selenium \
     && cd /selenium \
