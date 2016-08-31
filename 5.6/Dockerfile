@@ -1,4 +1,4 @@
-FROM nerones/simple-php-apache-dev:5.6.17
+FROM nerones/simple-php-apache-dev:5.6.24
 RUN curl -sL https://deb.nodesource.com/setup_4.x | bash -
 RUN apt-get -y install bzip2 openjdk-7-jre
 RUN apt-get -y install openssh-client git nodejs curl chrpath libssl-dev libxft-dev libfreetype6 libfreetype6-dev libfontconfig1 libfontconfig1-dev --no-install-recommends \
@@ -17,4 +17,4 @@ RUN mkdir /selenium \
     && mv phantomjs-1.9.7-linux-x86_64/bin/phantomjs /usr/local/bin/phantomjs-bin \
     && echo "/usr/local/bin/phantomjs-bin \"\$@\" > /dev/null 2>&1" > /usr/local/bin/phantomjs \
     && chmod +x /usr/local/bin/phantomjs
- 
+
