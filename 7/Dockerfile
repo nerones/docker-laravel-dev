@@ -1,4 +1,4 @@
-FROM nerones/simple-php-apache-dev:7.0.3
+FROM nerones/simple-php-apache-dev:7.0
 RUN curl -sL https://deb.nodesource.com/setup_6.x | bash -
 RUN apt-get -y install bzip2 openjdk-7-jre
 RUN apt-get -y install openssh-client git nodejs curl chrpath libssl-dev libxft-dev libfreetype6 libfreetype6-dev libfontconfig1 libfontconfig1-dev --no-install-recommends \
